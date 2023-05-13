@@ -41,6 +41,4 @@ final class WithErrorHandlerFactory implements FromCheckFactoryInterface
     {
         return new ParallelCheckWithErrorHandler($check, $this->successHandler, $this->errorHandler);
     }
-
-
 }

@@ -36,7 +36,7 @@
     "psalm": "tools/psalm --threads=10 --long-progress",
     "composer-unused": "tools/composer-unused --no-progress --no-interaction",
     "composer-require-checker": "tools/composer-require-checker --no-interaction",
-    "infection": "XDEBUG_MODE=coverage tools/infection --min-msi=95 --min-covered-msi=95 --threads=4 --no-progress --show-mutations",
+    "infection": "XDEBUG_MODE=coverage tools/infection --min-msi=100 --min-covered-msi=100 --threads=4 --no-progress --show-mutations",
     "ci-all": [
       "@phpunit",
       "@psalm",
@@ -52,5 +52,8 @@
     "composer-require-checker": "Checks for missing required composer packages",
     "infection": "Creates mutation tests to discover missing test coverage",
     "ci-all": "Runs all ci tools in sequence"
+  },
+  "require-dev": {
+    "mockery/mockery": "^1.5"
   }
 }

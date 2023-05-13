@@ -17,6 +17,8 @@
       <path value="$PROJECT_DIR$/vendor/spatie/async" />
       <path value="$PROJECT_DIR$/vendor/codenamephp/deploymentchecks.base" />
       <path value="$PROJECT_DIR$/vendor/laravel/serializable-closure" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
@@ -124,7 +126,8 @@
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
   <component name="PhpUnit">
     <phpunit_settings>
-      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" />
+      <phpunit_by_interpreter interpreter_id="132211ba-7b7c-4df6-bfb8-c65b90cacc37" load_method="PHPUNIT_PHAR" configuration_file_path="/app/test/phpunit.dist.xml" custom_loader_path="/app/vendor/autoload.php" phpunit_phar_path="/app/tools/phpunit.phar" use_configuration_file="true" />
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" phpunit_phar_path="" />
     </phpunit_settings>
   </component>
   <component name="PsalmOptionsConfiguration">

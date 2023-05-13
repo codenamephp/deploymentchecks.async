@@ -27,6 +27,13 @@ use Spatie\Async\Pool;
 use Throwable;
 
 /**
+ * A collection that runs all checks in parallel and returns the results in a collection. It iterates over all checks, passes them to the factory to create
+ * a wrapped parallel check that can be passed to the pool. After the check is finished the result is either passed to the success handler or to the
+ * error handler if the check implements the error handler interface. The result is then added to the result collection. The error handler is called
+ * if the check throws an exception, not if it returns a failed result.
+ *
+ * When all checks are finished the result collection is returned.
+ *
  * @psalm-api
  */
 final readonly class AsyncCheckCollection implements CheckInterface
