@@ -1,3 +1,0 @@
-PHP_DEBUGGER=xdebug
-
-php.xdebug.mode=develop,debug

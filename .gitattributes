@@ -5,11 +5,11 @@
 /.cache export-ignore
 /.github export-ignore
 /.logs export-ignore
+/.phive export-ignore
 
 /.gitignore export-ignore
 /.gitattributes export-ignore
 /.env.dist
 /docker-compose.yml export-ignore
 /infection.json.dist export-ignore
-/phive.xml export-ignore
 /psalm.xml export-ignore

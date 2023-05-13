@@ -1,6 +1,6 @@
 {
-  "name": "codenamephp/template.php.library",
-  "description": "Template for php libraries to quickstart development",
+  "name": "codenamephp/deploymentchecks.async",
+  "description": "",
   "type": "library",
   "license": "Apache-2.0",
   "authors": [
@@ -10,13 +10,45 @@
     }
   ],
   "require": {
-    "php": "^8.0",
-    "codenamephp/installer": "^1.0"
+    "php": "^8.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "de\\codenamephp\\deploymentchecks\\async\\": [
+        "src"
+      ]
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "de\\codenamephp\\deploymentchecks\\async\\test\\": [
+        "test"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true
   },
   "scripts": {
-    "run-installer": "composer install && php .installer/install.php && composer update && phive update"
+    "phpunit": "tools/phpunit.phar -c test/phpunit.dist.xml test/",
+    "psalm": "tools/psalm --threads=10 --long-progress",
+    "composer-unused": "tools/composer-unused --no-progress --no-interaction",
+    "composer-require-checker": "tools/composer-require-checker --no-interaction",
+    "infection": "XDEBUG_MODE=coverage tools/infection --min-msi=95 --min-covered-msi=95 --threads=4 --no-progress --show-mutations",
+    "ci-all": [
+      "@phpunit",
+      "@psalm",
+      "@composer-unused",
+      "@composer-require-checker",
+      "@infection"
+    ]
   },
   "scripts-descriptions": {
-    "run-installer": "Command to run the install. Installs the dependencies for the install before running the installer and updates the new dependencies after the installer is done"
+    "phpunit": "Runs phpunit tests",
+    "psalm": "Runs psalm static analysis",
+    "composer-unused": "Checks for unused composer packages",
+    "composer-require-checker": "Checks for missing required composer packages",
+    "infection": "Creates mutation tests to discover missing test coverage",
+    "ci-all": "Runs all ci tools in sequence"
   }
 }

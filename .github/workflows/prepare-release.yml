@@ -13,10 +13,3 @@ jobs:
     uses: codenamephp/workflows.common/.github/workflows/draft-release.yml@1
     with:
       version: ${{ needs.calculate_next_version.outputs.version }}
-  update_changelog:
-    uses: codenamephp/workflows.common/.github/workflows/update-changelog.yml@1
-    needs: calculate_next_version
-    with:
-      ref: ${{github.ref_name}}
-      future-release: ${{ needs.calculate_next_version.outputs.version }}
-      release-branch: 'release'

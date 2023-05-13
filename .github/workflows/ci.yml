@@ -19,4 +19,4 @@ jobs:
   ci:
     uses: codenamephp/workflows.php/.github/workflows/ci.yml@1
     with:
-      php-versions: '["8.1"]'
+      php-versions: '["8.2"]'
