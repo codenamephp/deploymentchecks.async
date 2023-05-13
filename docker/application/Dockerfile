@@ -1,4 +1,4 @@
-FROM webdevops/php-dev:8.1
+FROM webdevops/php-dev:8.2
 
 COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
 COPY --from=phario/phive:0.15.2 /usr/local/bin/phive /usr/local/bin/phive

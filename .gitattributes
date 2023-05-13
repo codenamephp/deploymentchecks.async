@@ -13,3 +13,7 @@
 /docker-compose.yml export-ignore
 /infection.json.dist export-ignore
 /psalm.xml export-ignore
+
+*.php text=auto eol=lf
+*.sh text=auto eol=lf
+/run text=auto eol=lf

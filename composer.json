@@ -1,6 +1,6 @@
 {
   "name": "codenamephp/deploymentchecks.async",
-  "description": "",
+  "description": "Package that let's you run the deployment checks in parallel.",
   "type": "library",
   "license": "Apache-2.0",
   "authors": [
@@ -10,7 +10,9 @@
     }
   ],
   "require": {
-    "php": "^8.2"
+    "php": "^8.2",
+    "codenamephp/deploymentchecks.base": "*",
+    "spatie/async": "^1.5"
   },
   "autoload": {
     "psr-4": {
