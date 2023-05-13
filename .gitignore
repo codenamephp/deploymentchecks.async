@@ -1,0 +1,10 @@
+/.cache/*
+/.logs/*
+/test/.phpunit.result.cache
+composer.phar
+/vendor/
+composer.lock
+/.idea
+/.env
+/tools/*
+!/**/.gitkeep

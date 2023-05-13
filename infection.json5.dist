@@ -1,0 +1,18 @@
+{
+    "timeout": 10,
+    "source": {
+        "directories": [
+            "src"
+        ]
+    },
+    "phpUnit": {
+        "configDir": "test",
+        "customPath": "tools\/phpunit.phar"
+    },
+    "logs": {
+        "text": ".logs/infection.log"
+    },
+    "mutators": {
+        "@default": true
+    }
+}

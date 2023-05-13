@@ -1,0 +1,22 @@
+{
+  "name": "codenamephp/template.php.library",
+  "description": "Template for php libraries to quickstart development",
+  "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Bastian Schwarz",
+      "email": "bastian@codename-php.de"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "codenamephp/installer": "^1.0"
+  },
+  "scripts": {
+    "run-installer": "composer install && php .installer/install.php && composer update && phive update"
+  },
+  "scripts-descriptions": {
+    "run-installer": "Command to run the install. Installs the dependencies for the install before running the installer and updates the new dependencies after the installer is done"
+  }
+}

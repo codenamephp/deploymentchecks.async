@@ -1,0 +1,54 @@
+{
+  "name": "{{vendor}}/{{componentName|lower}}",
+  "description": "",
+  "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Bastian Schwarz",
+      "email": "bastian@codename-php.de"
+    }
+  ],
+  "require": {
+    "php": "^{{phpVersion}}"
+  },
+  "autoload": {
+    "psr-4": {
+      "{{namespace|replace({'\\':'\\\\'})}}\\": [
+        "src"
+      ]
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "{{namespace|replace({'\\':'\\\\'})}}\\test\\": [
+        "test"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "scripts": {
+    "phpunit": "tools/phpunit.phar -c test/phpunit.dist.xml test/",
+    "psalm": "tools/psalm --threads=10 --long-progress",
+    "composer-unused": "tools/composer-unused --no-progress --no-interaction",
+    "composer-require-checker": "tools/composer-require-checker --no-interaction",
+    "infection": "XDEBUG_MODE=coverage tools/infection --min-msi=95 --min-covered-msi=95 --threads=4 --no-progress --show-mutations",
+    "ci-all": [
+      "@phpunit",
+      "@psalm",
+      "@composer-unused",
+      "@composer-require-checker",
+      "@infection"
+    ]
+  },
+  "scripts-descriptions": {
+    "phpunit": "Runs phpunit tests",
+    "psalm": "Runs psalm static analysis",
+    "composer-unused": "Checks for unused composer packages",
+    "composer-require-checker": "Checks for missing required composer packages",
+    "infection": "Creates mutation tests to discover missing test coverage",
+    "ci-all": "Runs all ci tools in sequence"
+  }
+}

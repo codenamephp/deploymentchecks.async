@@ -1,0 +1,22 @@
+
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - release
+    paths-ignore:
+      - '**.md'
+  pull_request:
+    branches:
+      - main
+      - release
+    paths-ignore:
+      - '**.md'
+
+jobs:
+  ci:
+    uses: codenamephp/workflows.php/.github/workflows/ci.yml@1
+    with:
+      php-versions: '["8.1"]'
